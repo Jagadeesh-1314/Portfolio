@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+:root{
+  background-color: #9333ea;
+}
 /* Typography and Heading Styles */
 h1, h2, h3 {
     font-family: 'Poppins', sans-serif; /* You can import this Google Font for better readability */
@@ -29,28 +32,36 @@ h1, h2, h3 {
   }
   
   /* Buttons */
-  .btn {
-    padding: 0.75rem 1.5rem;
-    border-radius: 8px;
-    font-weight: 500;
-    transition: all 0.3s ease;
+  .btn-linkedin {
+    background-color: #b4e5ff;
+    color: rgb(17, 0, 254);
   }
   
-  .btn-light {
-    background-color: #f9f9f9;
-    color: #333;
+  .btn-linkedin:hover {
+    background-color: #00a6ff; /* LinkedIn color */
+    color: rgb(49, 3, 255);
   }
   
-  .btn-dark {
-    background-color: #333;
-    color: #fff;
+  .btn-github {
+    background-color: #fefefe; /* GitHub color */
+    color: rgb(0, 0, 0);
   }
   
-  .btn:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+  .btn-github:hover {
+    background-color: #000; /* Darker GitHub color */
+    color: white;
   }
   
+  .btn-gmail {
+    background-color: #fe4f3f; /* Gmail color */
+    color: white;
+  }
+  
+  .btn-gmail:hover {
+    background-color: #c1352e; /* Darker Gmail color */
+  }
+  
+
   /* Header */
   header {
     background-image: linear-gradient(to right, #4f46e5, #9333ea);
@@ -116,7 +127,7 @@ h1, h2, h3 {
   
   .skill-bar {
     width: 100%;
-    background-color: #e2e8f0;
+    background-color: #563b3b;
     border-radius: 50px;
     height: 20px;
     position: relative;
@@ -139,7 +150,7 @@ h1, h2, h3 {
   
   /* Project Section */
   .project-card {
-    padding: 1.5rem;
+    padding: 2rem;
     border-radius: 10px;
     background-color: #fff;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
@@ -184,4 +195,106 @@ h1, h2, h3 {
   footer a:hover {
     text-decoration: underline;
   }
-  
+  /* Achievement, Hobbies, and Activities Cards */
+.achievement-card, .hobby-card, .activity-card {
+  padding: 1.5rem;
+  border-radius: 10px;
+  background-color: #000000;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.achievement-card:hover, .hobby-card:hover, .activity-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Layout for Activities and Hobbies */
+@media (max-width: 768px) {
+  .grid-cols-3 {
+    grid-template-columns: 1fr;
+  }
+  .grid-cols-2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* Container styles */
+.container {
+  max-width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Section margin */
+.mt-10 {
+  margin-top: 2.5rem; /* 40px */
+}
+
+/* Heading Styles */
+.text-4xl {
+  font-size: 2.25rem; /* 36px */
+  font-weight: 700; /* font-bold */
+}
+
+.text-center {
+  text-align: center; /* center-align */
+}
+
+.mb-10 {
+  margin-bottom: 2.5rem; /* 40px */
+}
+
+.text-gray-800 {
+  color: #2d3748; /* Dark gray */
+}
+
+/* Div Card styles */
+.bg-gradient-to-r {
+  background: linear-gradient(to right, #faf5ff, #ebf8ff, #faf5ff); /* Gradient from purple-100, via blue-100, to purple-50 */
+}
+
+.shadow-xl {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); /* Shadow for box */
+}
+
+.rounded-xl {
+  border-radius: 0.75rem; /* Large rounded corners */
+}
+
+.p-10 {
+  padding: 2.5rem; /* Padding for all sides */
+}
+
+.md\\:p-14 {
+  padding: 3.5rem; /* Padding on medium screens and up (768px and larger) */
+}
+
+/* Hover Effects */
+.transition-transform {
+  transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out; /* Smooth transitions */
+}
+
+.hover\\:scale-105:hover {
+  transform: scale(1.05); /* Scale up on hover */
+}
+
+.hover\\:shadow-2xl:hover {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); /* Larger shadow on hover */
+}
+
+/* Paragraph Styles */
+.text-lg {
+  font-size: 1.125rem; /* 18px */
+}
+
+.text-gray-700 {
+  color: #4a5568; /* Medium dark gray */
+}
+
+.leading-relaxed {
+  line-height: 1.75rem; /* 28px */
+}
